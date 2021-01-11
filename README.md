@@ -1,1 +1,3 @@
-# VoyagerTutorial2
+# VoyagerTutorial
+
+Welcome to the Voyager tutorial!
