@@ -1,0 +1,6 @@
+numpy
+matplotlib
+tqdm
+git+https://github.com/UCBerkeleySETI/blimpy
+# git+https://github.com/UCBerkeleySETI/turbo_seti
+git+https://github.com/OliverEvans96/turbo_seti
