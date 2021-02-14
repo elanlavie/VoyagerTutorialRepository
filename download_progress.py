@@ -1,7 +1,9 @@
+import os
+
 from tqdm.notebook import tqdm
 import requests
 
-def download_file_with_progress_bar(url, filename=None, download_dir=os.curdir, redownload=False):
+def download_file_with_progress_bar(url, filename=None, download_dir=os.curdir, mkdir=True, redownload=False):
     # From https://stackoverflow.com/a/37573701/4228052
     
     # Use the filename from the end of the URL by default
@@ -10,7 +12,10 @@ def download_file_with_progress_bar(url, filename=None, download_dir=os.curdir, 
         
     # Make sure the download directory exists
     if not os.path.exists(download_dir):
-        raise FileNotFoundError("Download directory '{}' does not exist.".format(download_dir))
+        if mkdir:
+            os.makedirs(download_dir)
+        else:
+            raise FileNotFoundError("Download directory '{}' does not exist, and `mkdir` option is disabled.".format(download_dir))
     elif not os.path.isdir(download_dir):
         raise NotADirectoryError("Download directory '{}' exists, but is not actually a directory!".format(download_dir))
         
