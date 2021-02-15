@@ -13,8 +13,7 @@ dependencies:
   # Install some git dependencies using pip
   - pip:
     - git+https://github.com/UCBerkeleySETI/blimpy
-    # - git+https://github.com/UCBerkeleySETI/turbo_seti
-    - git+https://github.com/OliverEvans96/turbo_seti
+    - git+https://github.com/UCBerkeleySETI/turbo_seti
 
 prefix: /home/oliver/local/miniconda3/envs/voyager_tutorial
 
