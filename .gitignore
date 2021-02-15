@@ -1,4 +1,8 @@
 .ipynb_checkpoints/
 __pycache__/
 *.h5
-output/
+*.lst
+*.dat
+*.log
+*.csv
+*.png
