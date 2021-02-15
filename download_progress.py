@@ -1,6 +1,7 @@
 import os
 
-from tqdm.notebook import tqdm
+from tqdm.notebook import tqdm as tqdm_notebook
+from tqdm import tqdm
 import requests
 
 def download_file_with_progress_bar(url, filename=None, download_dir=os.curdir, mkdir=True, redownload=False):
@@ -38,7 +39,10 @@ def download_file_with_progress_bar(url, filename=None, download_dir=os.curdir, 
     # Create the progress bar
     total_size_in_bytes = int(response.headers.get('content-length', 0))
     block_size = 1024 #1 Kibibyte
-    progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True, desc=download_path)
+    try:
+        progress_bar = tqdm_notebook(total=total_size_in_bytes, unit='iB', unit_scale=True, desc=download_path)
+    except ImportError:
+        progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True, desc=download_path, mininterval=5)
     
     # Write the file
     with open(download_path, 'wb') as file:
