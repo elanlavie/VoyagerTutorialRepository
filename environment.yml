@@ -15,5 +15,3 @@ dependencies:
     - git+https://github.com/UCBerkeleySETI/blimpy
     - git+https://github.com/UCBerkeleySETI/turbo_seti
 
-prefix: /home/oliver/local/miniconda3/envs/voyager_tutorial
-
