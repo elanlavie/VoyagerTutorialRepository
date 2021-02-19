@@ -1,0 +1,17 @@
+name: turboSETI
+channels:
+  - defaults
+dependencies:
+  # Core requirements
+  - python=3.7
+  - pip
+  # 3rd party packages
+  - requests
+  - tqdm
+  # Automatically create a Jupyter kernel for this env
+  - ipykernel
+  # Install some git dependencies using pip
+  - pip:
+    - git+https://github.com/UCBerkeleySETI/blimpy
+    - git+https://github.com/UCBerkeleySETI/turbo_seti
+

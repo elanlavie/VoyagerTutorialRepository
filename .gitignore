@@ -1,1 +1,8 @@
-.ipynb_checkpoints
+.ipynb_checkpoints/
+__pycache__/
+*.h5
+*.lst
+*.dat
+*.log
+*.csv
+*.png
