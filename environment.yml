@@ -8,7 +8,7 @@ dependencies:
   # 3rd party packages
   - requests
   - tqdm
-  # Automatically create a Jupyter kernel for this env
+  # Allow a Jupyter kernel to be created for this env
   - ipykernel
   # Install some git dependencies using pip
   - pip:
